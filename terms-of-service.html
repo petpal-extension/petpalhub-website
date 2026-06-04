@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms of Service — PetPal Hub</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --cream: #FAF6EF;
+  --warm: #F2E8D5;
+  --amber: #E8A030;
+  --rust: #C4522A;
+  --forest: #2D5A3D;
+  --forest-light: #3D7A52;
+  --dark: #1A1208;
+  --mid: #4A3728;
+  --text: #2C1F12;
+  --gold: #D4A017;
+  --soft: #F7F0E6;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+nav {
+  position: sticky; top: 0; left: 0; right: 0;
+  z-index: 100;
+  padding: 20px 60px;
+  display: flex; align-items: center; justify-content: space-between;
+  background: rgba(250,246,239,0.96);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(232,160,48,0.15);
+}
+.nav-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px; font-weight: 900;
+  color: var(--dark); letter-spacing: -0.5px;
+  text-decoration: none;
+}
+.nav-logo span { color: var(--amber); }
+.nav-back {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px; letter-spacing: 1px;
+  color: var(--mid); text-decoration: none;
+  text-transform: uppercase;
+  display: flex; align-items: center; gap: 8px;
+  transition: color 0.2s;
+}
+.nav-back:hover { color: var(--amber); }
+
+.page-hero {
+  background: var(--forest);
+  padding: 80px 60px 60px;
+  position: relative;
+  overflow: hidden;
+}
+.page-hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 60% 80% at 80% 50%, rgba(232,160,48,0.1) 0%, transparent 70%);
+}
+.page-hero-grid {
+  position: absolute; inset: 0;
+  background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+.hero-inner { position: relative; z-index: 2; max-width: 800px; }
+.page-tag {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(0,0,0,0.3); color: var(--cream);
+  padding: 6px 16px; border-radius: 2px;
+  font-family: 'Space Mono', monospace;
+  font-size: 11px; letter-spacing: 1px;
+  margin-bottom: 24px;
+}
+.page-tag::before { content: '●'; color: var(--amber); font-size: 8px; }
+.page-hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(40px, 5vw, 64px);
+  font-weight: 900; line-height: 1.05;
+  letter-spacing: -1.5px;
+  color: var(--cream);
+  margin-bottom: 20px;
+}
+.page-hero h1 em { color: var(--amber); font-style: italic; }
+.page-hero p {
+  font-size: 15px; color: rgba(250,246,239,0.6);
+  line-height: 1.7; font-weight: 300;
+}
+.page-hero p strong { color: rgba(250,246,239,0.85); font-weight: 500; }
+
+.content-wrap {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 80px 60px;
+}
+
+.toc {
+  background: var(--soft);
+  border: 1px solid rgba(196,82,42,0.12);
+  border-radius: 4px;
+  padding: 32px 36px;
+  margin-bottom: 60px;
+}
+.toc-title {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--amber);
+  margin-bottom: 16px;
+}
+.toc ol {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 32px;
+  counter-reset: toc-counter;
+}
+.toc li { counter-increment: toc-counter; }
+.toc a {
+  font-size: 13px; color: var(--mid);
+  text-decoration: none;
+  display: flex; align-items: center; gap: 8px;
+  transition: color 0.2s;
+}
+.toc a::before {
+  content: counter(toc-counter, decimal-leading-zero);
+  font-family: 'Space Mono', monospace;
+  font-size: 10px; color: var(--amber);
+  min-width: 20px;
+}
+.toc a:hover { color: var(--amber); }
+
+.policy-section {
+  margin-bottom: 56px;
+  scroll-margin-top: 100px;
+}
+.section-num {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px; letter-spacing: 2px;
+  color: var(--amber); text-transform: uppercase;
+  margin-bottom: 10px; display: block;
+}
+.policy-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px; font-weight: 900;
+  letter-spacing: -0.5px; color: var(--dark);
+  margin-bottom: 20px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid rgba(232,160,48,0.2);
+}
+.policy-section p {
+  font-size: 14px; line-height: 1.8;
+  color: var(--mid); margin-bottom: 14px;
+  font-weight: 300;
+}
+.policy-section ul {
+  list-style: none;
+  margin: 14px 0;
+}
+.policy-section ul li {
+  font-size: 14px; color: var(--mid);
+  line-height: 1.7; padding: 6px 0 6px 24px;
+  position: relative;
+  border-bottom: 1px solid rgba(196,82,42,0.07);
+}
+.policy-section ul li:last-child { border: none; }
+.policy-section ul li::before {
+  content: '→';
+  position: absolute; left: 0;
+  color: var(--amber);
+  font-family: 'Space Mono', monospace;
+  font-size: 11px; font-weight: 700;
+}
+.highlight-box {
+  background: rgba(232,160,48,0.08);
+  border-left: 3px solid var(--amber);
+  padding: 20px 24px;
+  border-radius: 0 4px 4px 0;
+  margin: 20px 0;
+}
+.highlight-box p { margin: 0; font-size: 14px; color: var(--mid); }
+.highlight-box strong { color: var(--dark); }
+.warning-box {
+  background: rgba(196,82,42,0.07);
+  border-left: 3px solid var(--rust);
+  padding: 20px 24px;
+  border-radius: 0 4px 4px 0;
+  margin: 20px 0;
+}
+.warning-box p { margin: 0; font-size: 14px; color: var(--mid); }
+.warning-box strong { color: var(--rust); }
+.contact-box {
+  background: var(--dark);
+  color: var(--cream);
+  padding: 36px;
+  border-radius: 4px;
+  margin-top: 60px;
+  text-align: center;
+}
+.contact-box h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px; font-weight: 900;
+  margin-bottom: 10px;
+}
+.contact-box p { font-size: 13px; color: rgba(250,246,239,0.6); margin-bottom: 16px; }
+.contact-box a {
+  display: inline-block;
+  background: var(--amber); color: var(--dark);
+  padding: 12px 28px; border-radius: 2px;
+  font-family: 'Space Mono', monospace;
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 1px; text-decoration: none;
+  text-transform: uppercase;
+}
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(232,160,48,0.3), transparent);
+  margin: 56px 0;
+}
+
+footer {
+  background: var(--dark);
+  color: rgba(250,246,239,0.4);
+  padding: 32px 60px;
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 12px;
+}
+footer a { color: var(--amber); text-decoration: none; }
+footer a:hover { text-decoration: underline; }
+
+@media (max-width: 768px) {
+  nav { padding: 16px 20px; }
+  .page-hero { padding: 60px 20px 40px; }
+  .content-wrap { padding: 40px 20px; }
+  .toc ol { grid-template-columns: 1fr; }
+  footer { flex-direction: column; gap: 12px; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">PetPal<span>Hub</span></a>
+  <a href="index.html" class="nav-back">← Back to Home</a>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-grid"></div>
+  <div class="hero-inner">
+    <div class="page-tag">Legal Document</div>
+    <h1>Terms of<em> Service</em></h1>
+    <p><strong>Last updated: June 2026</strong> &nbsp;·&nbsp; Effective date: June 2026<br>
+    Please read these Terms of Service carefully before using PetPal Hub. By installing or using our Chrome extension or website, you agree to be bound by these terms.</p>
+  </div>
+</div>
+
+<div class="content-wrap">
+
+  <nav class="toc">
+    <div class="toc-title">Table of Contents</div>
+    <ol>
+      <li><a href="#acceptance">Acceptance of Terms</a></li>
+      <li><a href="#description">Service Description</a></li>
+      <li><a href="#eligibility">Eligibility</a></li>
+      <li><a href="#account">Your Account & Content</a></li>
+      <li><a href="#acceptable-use">Acceptable Use</a></li>
+      <li><a href="#tiktok-tos">TikTok Integration</a></li>
+      <li><a href="#payments">Payments & Subscriptions</a></li>
+      <li><a href="#spotlight">PetSpotlight Terms</a></li>
+      <li><a href="#petvault">PetVault & Web3</a></li>
+      <li><a href="#ip">Intellectual Property</a></li>
+      <li><a href="#disclaimer">Disclaimers</a></li>
+      <li><a href="#liability">Limitation of Liability</a></li>
+      <li><a href="#termination">Termination</a></li>
+      <li><a href="#changes">Changes to Terms</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ol>
+  </nav>
+
+  <div class="policy-section" id="acceptance">
+    <span class="section-num">01 — Acceptance of Terms</span>
+    <h2>Acceptance of Terms</h2>
+    <p>By downloading, installing, or using the PetPal Hub Chrome extension or accessing our website at petpalhub.app (collectively, the "Service"), you agree to be bound by these Terms of Service ("Terms") and our <a href="privacy-policy.html" style="color:var(--amber)">Privacy Policy</a>.</p>
+    <p>If you do not agree to these Terms, please do not use our Service. These Terms constitute a legally binding agreement between you and PetPal Hub.</p>
+    <div class="highlight-box">
+      <p><strong>By using PetPal Hub, you confirm that you have read, understood, and agree to these Terms of Service.</strong></p>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="policy-section" id="description">
+    <span class="section-num">02 — Service Description</span>
+    <h2>Service Description</h2>
+    <p>PetPal Hub is a Chrome browser extension and associated web services that provide pet-themed wellness and entertainment features, including but not limited to:</p>
+    <ul>
+      <li><strong>PetTune:</strong> Personalised daily motivational quotes and reminders delivered as messages from your pet</li>
+      <li><strong>PetSpotlight:</strong> A paid feature allowing users to feature their pets in a community slideshow</li>
+      <li><strong>PetBazaar:</strong> An affiliate product marketplace for pet-related goods</li>
+      <li><strong>PawPrints:</strong> Custom pet merchandise ordering service</li>
+      <li><strong>PawPlay:</strong> Pet-themed browser games</li>
+      <li><strong>PixelPal:</strong> Animated 3D desktop pet (Premium)</li>
+      <li><strong>PetVault:</strong> NFT and cryptocurrency whitelist registration</li>
+      <li><strong>PetMatch:</strong> Pet adoption listings browser</li>
+      <li><strong>PawPro Hub:</strong> Directory of pet services and professionals</li>
+      <li><strong>BarkGains:</strong> Exclusive deals and coupons for Premium members</li>
+      <li><strong>TailTreasures:</strong> Pet-themed digital art marketplace</li>
+    </ul>
+    <p>Some features are free; others require a paid Premium subscription or individual purchase. We reserve the right to modify, suspend, or discontinue any feature at any time.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="policy-section" id="eligibility">
+    <span class="section-num">03 — Eligibility</span>
+    <h2>Eligibility</h2>
+    <p>You must be at least 13 years of age to use PetPal Hub. By using the Service, you represent and warrant that:</p>
+    <ul>
+      <li>You are at least 13 years old (or the age of digital consent in your country, whichever is higher)</li>
+      <li>If you are between 13 and 18 years old, you have obtained parental or guardian consent</li>
+      <li>You have the legal capacity to enter into a binding agreement</li>
+      <li>Your use of the Service does not violate any applicable laws in your jurisdiction</li>
+    </ul>
+    <p>Users who wish to participate in PetVault (NFT and cryptocurrency features) must be of legal age to enter into financial contracts in their jurisdiction, which is typically 18 years of age.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="policy-section" id="account">
+    <span class="section-num">04 — Your Account & Content</span>
+    <h2>Your Account &amp; Content</h2>
+    <p>PetPal Hub allows you to create a pet profile and submit content to certain features. Regarding your content:</p>
+    <ul>
+      <li>You retain ownership of any content you submit, including pet photos and descriptions</li>
+      <li>By submitting content (including PetSpotlight submissions), you grant PetPal Hub a non-exclusive, royalty-free, worldwide licence to display, distribute and promote that content within the Service</li>
+      <li>You are solely responsible for the content you submit and must own or have the rights to any photos uploaded</li>
+      <li>You agree not to submit content that is false, misleading, offensive, or infringes on third-party rights</li>
+      <li>We reserve the right to remove any content that violates these Terms without notice</li>
+    </ul>
+    <p>You are responsible for maintaining the security of any credentials associated with your use of the Service.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="policy-section" id="acceptable-use">
+    <span class="section-num">05 — Acceptable Use</span>
+    <h2>Acceptable Use</h2>
+    <p>You agree to use PetPal Hub only for lawful purposes. You must not:</p>
+    <ul>
+      <li>Violate any applicable local, national, or international laws or regulations</li>
+      <li>Submit false, fraudulent, or misleading pet information or content</li>
+      <li>Attempt to gain unauthorised access to any part of the Service or its related systems</li>
+      <li>Use the Service to transmit unsolicited commercial messages (spam)</li>
+      <li>Interfere with or disrupt the integrity or performance of the Service</li>
+      <li>Reverse engineer, decompile, or disassemble the extension</li>
+      <li>Use automated means (bots, scrapers) to access or interact with the Service</li>
+      <li>Impersonate any person or entity or misrepresent your affiliation with any person or entity</li>
+      <li>Submit content that contains viruses, malware, or other harmful code</li>
+      <li>Use the Service for any purpose that could harm animals or promote animal abuse</li>
+    </ul>
+    <div class="warning-box">
+      <p><strong>Violation of these terms may result in immediate termination of your access to PetPal Hub without refund.</strong></p>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="policy-section" id="tiktok-tos">
+    <span class="section-num">06 — TikTok Integration</span>
+    <h2>TikTok Integration</h2>
+    <p>PetPal Hub may offer features that integrate with the TikTok platform. When using TikTok-connected features, you acknowledge and agree that:</p>
+    <ul>
+      <li>You must comply with <a href="https://www.tiktok.com/legal/page/us/terms-of-service/en" target="_blank" style="color:var(--amber)">TikTok's Terms of Service</a> in addition to these Terms</li>
+      <li>You must have a valid TikTok account and comply with all TikTok account requirements</li>
+      <li>Content shared to TikTok via PetPal Hub is subject to TikTok's Community Guidelines and content policies</li>
+      <li>PetPal Hub is not responsible for any actions TikTok takes regarding your account or content</li>
+      <li>You authorise PetPal Hub to interact with TikTok's API on your behalf only for the features you explicitly activate</li>
+      <li>TikTok integration features may be modified or removed if TikTok changes its platform policies or API access</li>
+      <li>You may disconnect PetPal Hub's access to your TikTok account at any time through TikTok's settings</li>
+    </ul>
+    <p>PetPal Hub's use of TikTok APIs is governed by TikTok's Developer Terms of Service. We do not guarantee the continuous availability of TikTok integration features.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="policy-section" id="payments">
+    <span class="section-num">07 — Payments & Subscriptions</span>
+    <h2>Payments &amp; Subscriptions</h2>
+    <p>PetPal Hub offers both free and paid features. For paid features:</p>
+    <ul>
+      <li><strong>Premium subscription ($4.99/month):</strong> Billed monthly. You may cancel at any time; cancellation takes effect at the end of the current billing period.</li>
+      <li><strong>PetSpotlight slots:</strong> One-time purchases for 3-day ($2.99), 7-day ($5.99), or 30-day ($14.99) spotlight periods. These are non-refundable once the spotlight has begun.</li>
+      <li>All prices are listed in USD and may be subject to applicable taxes</li>
+      <li>Payment is processed by secure third-party payment processors; we do not store payment card details</li>
+      <li>We reserve the right to change pricing with 30 days' notice to existing subscribers</li>
+    </ul>
+    <p><strong>Refund policy:</strong> Premium subscriptions may be refunded within 7 days of the initial purchase if you have not used Premium features. Spotlight purchases are non-refundable once the spotlight period has started. Merchandise and digital art purchases follow the respective third-party provider's refund policy.</p>
+    <p><strong>Donations</strong> made via PayPal or cryptocurrency are voluntary and non-refundable. Donations do not entitle you to any goods or services.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="policy-section" id="spotlight">
+    <span class="section-num">08 — PetSpotlight Terms</span>
+    <h2>PetSpotlight Terms</h2>
+    <p>When submitting a pet for PetSpotlight, you agree that:</p>
+    <ul>
+      <li>You are the owner of the pet or have permission from the owner to submit their pet</li>
+      <li>All submitted information (name, breed, facts) is truthful and accurate</li>
+      <li>You own the rights to any photo submitted and grant PetPal Hub a licence to display it to all users during the spotlight period</li>
+      <li>Spotlight content must be appropriate for all audiences — no offensive, adult, or harmful content</li>
+      <li>PetPal Hub reserves the right to decline or remove any spotlight submission that violates these Terms</li>
+      <li>No refund will be issued if a spotlight is removed due to a Terms violation</li>
+    </ul>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="policy-section" id="petvault">
+    <span class="section-num">09 — PetVault & Web3 Features</span>
+    <h2>PetVault &amp; Web3 Features</h2>
+    <p>PetVault allows users to register a cryptocurrency wallet for potential NFT drops and token projects. Important disclosures:</p>
+    <ul>
+      <li>Whitelisting does not guarantee participation in or receipt of any NFT drop or token</li>
+      <li>Cryptocurrency and NFT markets are highly volatile; PetPal Hub makes no representations about value</li>
+      <li>You are solely responsible for the security of your cryptocurrency wallet</li>
+      <li>PetPal Hub is not a financial adviser and nothing in the Service constitutes financial advice</li>
+      <li>Participation in any PetPal NFT or token project is subject to separate terms published at the time of each project</li>
+      <li>You must comply with all applicable laws regarding cryptocurrency and NFTs in your jurisdiction</li>
+    </ul>
+    <div class="warning-box">
+      <p><strong>Cryptocurrency and NFT investments carry significant risk. Never invest more than you can afford to lose. PetPal Hub is not responsible for any financial losses related to PetVault or any associated projects.</strong></p>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="policy-section" id="ip">
+    <span class="section-num">10 — Intellectual Property</span>
+    <h2>Intellectual Property</h2>
+    <p>The PetPal Hub name, logo, extension design, feature names (PetTune, PetSpotlight, PetBazaar, PawPrints, PawPlay, PixelPal, PetVault, PetMatch, PawPro Hub, BarkGains, TailTreasures), and all associated content are the intellectual property of PetPal Hub.</p>
+    <ul>
+      <li>You may not copy, modify, distribute, or create derivative works based on the Service without written permission</li>
+      <li>The extension code is proprietary; reverse engineering is prohibited</li>
+      <li>Third-party trademarks, logos, and content referenced in the Service (including affiliate products, TikTok, PayPal, etc.) remain the property of their respective owners</li>
+    </ul>
+    <p>You retain ownership of content you submit. By submitting, you grant us the licence described in Section 4.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="policy-section" id="disclaimer">
+    <span class="section-num">11 — Disclaimers</span>
+    <h2>Disclaimers</h2>
+    <p>The Service is provided on an "as is" and "as available" basis without warranties of any kind, either express or implied. PetPal Hub disclaims all warranties including:</p>
+    <ul>
+      <li>Implied warranties of merchantability, fitness for a particular purpose, and non-infringement</li>
+      <li>That the Service will be uninterrupted, error-free, or free of viruses or other harmful components</li>
+      <li>That third-party affiliate products listed in PetBazaar are accurate, safe, or suitable for your pet</li>
+      <li>That pet adoption listings in PetMatch are accurate, complete, or current</li>
+      <li>That PawPro Hub service providers are qualified, licensed, or reliable</li>
+    </ul>
+    <p>PetPal Hub's motivational quotes and pet care reminders are for general informational and entertainment purposes only. Always consult a qualified veterinarian for professional pet health advice.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="policy-section" id="liability">
+    <span class="section-num">12 — Limitation of Liability</span>
+    <h2>Limitation of Liability</h2>
+    <p>To the maximum extent permitted by applicable law, PetPal Hub shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to:</p>
+    <ul>
+      <li>Loss of profits, data, or goodwill</li>
+      <li>Damages arising from your use of or inability to use the Service</li>
+      <li>Damages resulting from reliance on pet health information in the Service</li>
+      <li>Damages related to third-party products purchased through PetBazaar or PawPrints</li>
+      <li>Losses related to cryptocurrency or NFT activities via PetVault</li>
+      <li>Any unauthorised access to or alteration of your data</li>
+    </ul>
+    <p>Our total liability to you for any claims arising out of or relating to these Terms or the Service shall not exceed the amount you paid to PetPal Hub in the 12 months preceding the claim, or $100, whichever is greater.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="policy-section" id="termination">
+    <span class="section-num">13 — Termination</span>
+    <h2>Termination</h2>
+    <p>You may stop using PetPal Hub at any time by uninstalling the extension. To cancel a Premium subscription, do so via your payment provider before the next billing date.</p>
+    <p>PetPal Hub reserves the right to suspend or terminate your access to the Service at any time, with or without notice, if:</p>
+    <ul>
+      <li>You violate any provision of these Terms</li>
+      <li>We reasonably believe your use poses a risk to other users or to the Service</li>
+      <li>We are required to do so by law</li>
+    </ul>
+    <p>Upon termination, your right to use the Service ceases immediately. Provisions of these Terms that by their nature should survive termination (including intellectual property, disclaimers, and limitation of liability) shall survive.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="policy-section" id="changes">
+    <span class="section-num">14 — Changes to Terms</span>
+    <h2>Changes to Terms</h2>
+    <p>We may modify these Terms at any time. When we make material changes, we will update the "Last updated" date at the top of this page. For significant changes, we may also notify you through the extension or via email.</p>
+    <p>Your continued use of PetPal Hub after any changes to these Terms constitutes your acceptance of the new Terms. If you do not agree to the updated Terms, please discontinue use of the Service.</p>
+    <p>We also operate under and comply with applicable platform terms, including the <a href="https://developer.chrome.com/docs/webstore/program-policies/" target="_blank" style="color:var(--amber)">Chrome Web Store Developer Program Policies</a> and <a href="https://www.tiktok.com/legal/page/us/terms-of-service/en" target="_blank" style="color:var(--amber)">TikTok's Terms of Service</a>.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="policy-section" id="contact">
+    <span class="section-num">15 — Contact Us</span>
+    <h2>Contact Us</h2>
+    <p>If you have any questions about these Terms of Service, please contact us:</p>
+    <ul>
+      <li><strong>Email:</strong> petpalextension@gmail.com</li>
+      <li><strong>Website:</strong> petpalhub.app</li>
+    </ul>
+    <p>These Terms of Service are governed by and construed in accordance with applicable law. Any disputes shall be resolved through good-faith negotiation before pursuing other legal remedies.</p>
+  </div>
+
+  <div class="contact-box">
+    <h3>Questions about these Terms?</h3>
+    <p>Reach out and we'll clarify anything you need to know.</p>
+    <a href="mailto:petpalextension@gmail.com">✉ Contact Us</a>
+  </div>
+
+</div>
+
+<footer>
+  <span>© 2026 PetPal Hub · <a href="index.html">Home</a> · <a href="privacy-policy.html">Privacy Policy</a> · <a href="terms-of-service.html">Terms of Service</a></span>
+  <span>petpalextension@gmail.com</span>
+</footer>
+
+</body>
+</html>

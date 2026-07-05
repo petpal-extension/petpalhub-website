@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white text-ink-950 dark:bg-ink-950 dark:text-white transition-colors duration-300;
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display);
+}
+
+::selection {
+  background-color: rgba(45, 212, 200, 0.35);
+}
+
+/* Focus visibility for accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #2DD4C8;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Signature: paw-print trail divider used between major sections */
+.paw-trail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.25rem;
+  opacity: 0.35;
+}
+.paw-trail svg {
+  width: 14px;
+  height: 14px;
+}
+.paw-trail svg:nth-child(2n) {
+  transform: translateY(-6px) rotate(8deg);
+}
+.paw-trail svg:nth-child(3n) {
+  transform: translateY(2px) rotate(-6deg);
+}
+
+.glass-card {
+  @apply bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/60 dark:border-white/10;
+}
+
+.container-px {
+  @apply px-6 sm:px-8 lg:px-12;
+}
+
+.gradient-text {
+  @apply bg-cta-gradient bg-clip-text text-transparent;
+}

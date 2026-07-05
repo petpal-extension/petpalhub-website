@@ -16,7 +16,7 @@ export default function Download() {
       <div className="absolute inset-0 bg-cta-gradient opacity-[0.06] dark:opacity-[0.1]" />
       <div className="container-px mx-auto text-center max-w-2xl relative">
         <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight">
-          Get PetPal wherever you are
+          Get PetPalHub wherever you are
         </h2>
         <p className="mt-4 text-ink-900/65 dark:text-white/65">
           Start on Chrome today. Mobile and desktop are on the way, starting with PetTune.

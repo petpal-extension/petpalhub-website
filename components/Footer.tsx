@@ -3,19 +3,38 @@ import { PawPrint, Instagram, Twitter, Youtube, Facebook } from "lucide-react";
 const columns = [
   {
     title: "Product",
-    links: ["Features", "Pricing", "PetMatch", "Games", "Changelog"],
+    links: [
+      { label: "Features", href: "/#features" },
+      { label: "Pricing", href: "/#pricing" },
+      { label: "PetMatch", href: "/#features" },
+      { label: "Games", href: "/#games" },
+      { label: "Changelog", href: "#" },
+    ],
   },
   {
     title: "Company",
-    links: ["About", "Careers", "Press", "Contact"],
+    links: [
+      { label: "About", href: "#" },
+      { label: "Careers", href: "#" },
+      { label: "Press", href: "#" },
+      { label: "Contact", href: "mailto:support@petpalhub.app" },
+    ],
   },
   {
     title: "Resources",
-    links: ["Help Center", "Community Guidelines", "Charity Dashboard", "Blog"],
+    links: [
+      { label: "Help Center", href: "#" },
+      { label: "Community Guidelines", href: "#" },
+      { label: "Charity Dashboard", href: "/#" },
+      { label: "Blog", href: "#" },
+    ],
   },
   {
     title: "Legal",
-    links: ["Privacy Policy", "Terms of Service", "Cookie Policy"],
+    links: [
+      { label: "Privacy Policy", href: "/privacy-policy" },
+      { label: "Terms of Service", href: "/terms-of-service" },
+    ],
   },
 ];
 
@@ -25,11 +44,11 @@ export default function Footer() {
       <div className="container-px mx-auto">
         <div className="grid gap-10 lg:grid-cols-6">
           <div className="lg:col-span-2">
-            <a href="#top" className="flex items-center gap-2 font-display font-bold text-lg">
+            <a href="/#top" className="flex items-center gap-2 font-display font-bold text-lg">
               <span className="grid h-8 w-8 place-items-center rounded-xl bg-cta-gradient text-white">
                 <PawPrint className="h-4 w-4" />
               </span>
-              PetPal
+              PetPalHub
             </a>
             <p className="mt-4 text-sm text-ink-900/60 dark:text-white/60 max-w-xs">
               Your AI companion for every pet parent. Built to help pets live happier,
@@ -54,12 +73,12 @@ export default function Footer() {
               <h5 className="font-display font-semibold text-sm mb-4">{col.title}</h5>
               <ul className="space-y-2.5">
                 {col.links.map((l) => (
-                  <li key={l}>
+                  <li key={l.label}>
                     <a
-                      href="#"
+                      href={l.href}
                       className="text-sm text-ink-900/60 dark:text-white/60 hover:text-royal-600 dark:hover:text-turquoise-400 transition-colors"
                     >
-                      {l}
+                      {l.label}
                     </a>
                   </li>
                 ))}
@@ -69,7 +88,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-14 pt-6 border-t border-ink-900/10 dark:border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-ink-900/50 dark:text-white/50">
-          <p>© {new Date().getFullYear()} PetPal. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} PetPalHub. All rights reserved.</p>
           <p>Made with care, for pets everywhere.</p>
         </div>
       </div>

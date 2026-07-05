@@ -10,8 +10,8 @@ export default function Charity() {
         <div>
           <SectionHeading
             eyebrow="Giving back"
-            title="Every part of PetPal feeds the mission"
-            description="A share of PetPal's revenue, plus direct crypto and fiat donations through PetVault, goes straight to shelters and rescue partners."
+            title="Every part of PetPalHub feeds the mission"
+            description="A share of PetPalHub's revenue, plus direct crypto and fiat donations through PetVault, goes straight to shelters and rescue partners."
           />
           <div className="mt-8 space-y-5">
             <ProgressRow label="Shelter meals funded" value={82} />

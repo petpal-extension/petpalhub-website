@@ -11,7 +11,7 @@ export default function Features() {
       <div className="container-px mx-auto">
         <SectionHeading
           eyebrow="The toolkit"
-          title="Eleven ways PetPal shows up for your pet"
+          title="Eleven ways PetPalHub shows up for your pet"
           description="Each module solves one real problem for pet parents, from daily reminders to finding your next family member."
         />
 

@@ -1,6 +1,6 @@
-# PetPal Hub
+# PetPalHub Hub
 
-Marketing website for the PetPal Chrome extension — built with Next.js 14 (App Router), TypeScript, Tailwind CSS, and Framer Motion. Exports as a fully static site, ready for Cloudflare Pages.
+Marketing website for the PetPalHub Chrome extension — built with Next.js 14 (App Router), TypeScript, Tailwind CSS, and Framer Motion. Exports as a fully static site, ready for Cloudflare Pages.
 
 ## Stack
 
@@ -56,7 +56,7 @@ This generates a fully static site in the `out/` folder — plain HTML/CSS/JS, n
 ```bash
 git init
 git add .
-git commit -m "Initial commit: PetPal marketing site"
+git commit -m "Initial commit: PetPalHub marketing site"
 git branch -M main
 git remote add origin https://github.com/<your-username>/petpalhub.git
 git push -u origin main
@@ -85,9 +85,9 @@ wrangler pages deploy out --project-name=petpalhub
 
 ### Custom domain
 
-Once deployed, go to your Pages project → **Custom domains** → add your domain (e.g. `petpalhub.com`) and follow the DNS instructions (Cloudflare will auto-configure this if the domain's nameservers already point to Cloudflare).
+Once deployed, go to your Pages project → **Custom domains** → add your domain (e.g. `petpalhub.app`) and follow the DNS instructions (Cloudflare will auto-configure this if the domain's nameservers already point to Cloudflare).
 
-> Note: the site's metadata currently uses `https://petpalhub.com` as the canonical URL (in `app/layout.tsx`). Update `siteUrl` there, plus `public/robots.txt` and `public/sitemap.xml`, if you use a different domain.
+> Note: the site's metadata currently uses `https://petpalhub.app` as the canonical URL (in `app/layout.tsx`). Update `siteUrl` there, plus `public/robots.txt` and `public/sitemap.xml`, if you use a different domain.
 
 ## Customizing
 

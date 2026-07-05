@@ -61,7 +61,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mt-6 max-w-xl text-lg text-ink-900/70 dark:text-white/70"
           >
-            PetPal is the Chrome companion for pet parents: reminders that stick, an
+            PetPalHub is the Chrome companion for pet parents: reminders that stick, an
             adoption engine with heart, a marketplace you can trust, and a corner of
             the internet built entirely around your pet.
           </motion.p>

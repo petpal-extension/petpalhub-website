@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://petpalhub.com/sitemap.xml
+Sitemap: https://petpalhub.app/sitemap.xml

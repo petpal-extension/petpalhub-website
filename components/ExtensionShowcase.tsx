@@ -31,7 +31,7 @@ export default function ExtensionShowcase() {
           <SectionHeading
             eyebrow="Inside the extension"
             title="Your pet's whole routine, one click away"
-            description="PetPal lives quietly in your browser toolbar until you need it, then puts everything about your pet's day in front of you."
+            description="PetPalHub lives quietly in your browser toolbar until you need it, then puts everything about your pet's day in front of you."
             light
           />
           <div className="mt-10 space-y-6">

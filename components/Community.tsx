@@ -18,7 +18,7 @@ export default function Community() {
         <SectionHeading
           eyebrow="Community"
           title="Pet parents, showing up for each other"
-          description="PetPal is more fun with company. Track progress together, celebrate milestones, and share the moments worth remembering."
+          description="PetPalHub is more fun with company. Track progress together, celebrate milestones, and share the moments worth remembering."
         />
         <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {blocks.map((b, i) => (

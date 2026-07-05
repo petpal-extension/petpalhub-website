@@ -78,3 +78,26 @@ textarea:focus-visible {
 .gradient-text {
   @apply bg-cta-gradient bg-clip-text text-transparent;
 }
+
+/* Legal page typography (Privacy Policy / Terms of Service) */
+.legal-prose h2 {
+  @apply font-display text-xl font-bold mt-10 mb-3 first:mt-0;
+}
+.legal-prose h3 {
+  @apply font-display text-base font-bold mt-6 mb-2;
+}
+.legal-prose p {
+  @apply text-sm leading-relaxed text-ink-900/70 dark:text-white/70 mb-4;
+}
+.legal-prose ul {
+  @apply list-disc pl-5 mb-4 space-y-1.5;
+}
+.legal-prose li {
+  @apply text-sm leading-relaxed text-ink-900/70 dark:text-white/70;
+}
+.legal-prose a {
+  @apply text-royal-600 dark:text-turquoise-400 font-medium hover:underline;
+}
+.legal-prose strong {
+  @apply text-ink-950 dark:text-white font-semibold;
+}

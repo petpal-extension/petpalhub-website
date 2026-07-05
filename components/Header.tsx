@@ -6,12 +6,12 @@ import { Menu, X, Moon, Sun, PawPrint } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const links = [
-  { href: "#features", label: "Features" },
-  { href: "#merchandise", label: "Shop" },
-  { href: "#community", label: "Community" },
-  { href: "#games", label: "Games" },
-  { href: "#pricing", label: "Pricing" },
-  { href: "#faq", label: "FAQ" },
+  { href: "/#features", label: "Features" },
+  { href: "/#merchandise", label: "Shop" },
+  { href: "/#community", label: "Community" },
+  { href: "/#games", label: "Games" },
+  { href: "/#pricing", label: "Pricing" },
+  { href: "/#faq", label: "FAQ" },
 ];
 
 export default function Header() {
@@ -36,11 +36,11 @@ export default function Header() {
       }`}
     >
       <div className="container-px mx-auto flex h-16 items-center justify-between">
-        <a href="#top" className="flex items-center gap-2 font-display font-bold text-lg">
+        <a href="/#top" className="flex items-center gap-2 font-display font-bold text-lg">
           <span className="grid h-8 w-8 place-items-center rounded-xl bg-cta-gradient text-white">
             <PawPrint className="h-4 w-4" />
           </span>
-          PetPal
+          PetPalHub
         </a>
 
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
@@ -66,7 +66,7 @@ export default function Header() {
             </button>
           )}
           <a
-            href="#download"
+            href="/#download"
             className="hidden sm:inline-flex items-center rounded-full bg-cta-gradient px-5 py-2 text-sm font-semibold text-white shadow-glow hover:brightness-110 transition"
           >
             Install Extension
@@ -96,7 +96,7 @@ export default function Header() {
                 </a>
               ))}
               <a
-                href="#download"
+                href="/#download"
                 onClick={() => setOpen(false)}
                 className="inline-flex justify-center rounded-full bg-cta-gradient px-5 py-2 text-sm font-semibold text-white"
               >

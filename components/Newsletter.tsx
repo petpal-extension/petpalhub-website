@@ -25,7 +25,7 @@ export default function Newsletter() {
             </p>
 
             {submitted ? (
-              <p className="mt-8 text-turquoise-400 font-semibold">You're on the list. Welcome to PetPal.</p>
+              <p className="mt-8 text-turquoise-400 font-semibold">You're on the list. Welcome to PetPalHub.</p>
             ) : (
               <form
                 onSubmit={(e) => {

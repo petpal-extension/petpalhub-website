@@ -69,7 +69,7 @@ export const features: Feature[] = [
     name: "PetMatch",
     tagline: "Our reason for being here",
     description:
-      "Search adoptable pets nearby and connect with shelters directly. It's the feature that sets PetPal apart, and the mission behind everything else.",
+      "Search adoptable pets nearby and connect with shelters directly. It's the feature that sets PetPalHub apart, and the mission behind everything else.",
     icon: "HeartHandshake",
     gradient: "from-royal-500 to-violet-500",
   },
@@ -214,7 +214,7 @@ export const testimonials = [
     name: "Daniel R.",
     role: "Cat dad, two rescues",
     quote:
-      "PetMatch is what got me to actually adopt instead of just browsing. Found both of mine through PetPal.",
+      "PetMatch is what got me to actually adopt instead of just browsing. Found both of mine through PetPalHub.",
   },
   {
     name: "Sofia L.",
@@ -232,12 +232,12 @@ export const testimonials = [
 
 export const faqs = [
   {
-    q: "Is PetPal free to use?",
+    q: "Is PetPalHub free to use?",
     a: "Yes. The core extension, including PetTune reminders, PetBazaar, PawPlays, and PetMatch, is free forever. Premium and PetPalium unlock extra features for pet parents who want more.",
   },
   {
     q: "What is PetMatch and how is it different?",
-    a: "PetMatch connects you directly with shelters and adoptable pets nearby. It's the feature PetPal was originally built around, and it stays free and central to the whole platform.",
+    a: "PetMatch connects you directly with shelters and adoptable pets nearby. It's the feature PetPalHub was originally built around, and it stays free and central to the whole platform.",
   },
   {
     q: "How does PetVault work?",
@@ -248,8 +248,8 @@ export const faqs = [
     a: "Yes, Premium and PetPalium are both month-to-month with no lock-in. Cancel anytime from your account settings and keep access until the end of your billing period.",
   },
   {
-    q: "Which platforms is PetPal available on?",
-    a: "PetPal is currently a Chrome extension. Android and iOS apps are in development, starting with the PetTune reminders feature, with desktop support planned after.",
+    q: "Which platforms is PetPalHub available on?",
+    a: "PetPalHub is currently a Chrome extension. Android and iOS apps are in development, starting with the PetTune reminders feature, with desktop support planned after.",
   },
   {
     q: "How is PetSpotlight priced?",

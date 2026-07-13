@@ -44,9 +44,6 @@ export const metadata: Metadata = {
       "Reminders, adoption search, a trusted marketplace, and a community built entirely around your pet.",
     images: ["/og-image.png"],
   },
-  icons: {
-    icon: "/favicon.svg",
-  },
 };
 
 const jsonLd = {

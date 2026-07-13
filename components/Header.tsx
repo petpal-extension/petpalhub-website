@@ -37,9 +37,7 @@ export default function Header() {
     >
       <div className="container-px mx-auto flex h-16 items-center justify-between">
         <a href="/#top" className="flex items-center gap-2 font-display font-bold text-lg">
-          <span className="grid h-8 w-8 place-items-center rounded-xl bg-cta-gradient text-white">
-            <PawPrint className="h-4 w-4" />
-          </span>
+          <img src="/logo.png" alt="PetPalHub" className="h-8 w-8 rounded-xl" />
           PetPalHub
         </a>
 

@@ -45,9 +45,7 @@ export default function Footer() {
         <div className="grid gap-10 lg:grid-cols-6">
           <div className="lg:col-span-2">
             <a href="/#top" className="flex items-center gap-2 font-display font-bold text-lg">
-              <span className="grid h-8 w-8 place-items-center rounded-xl bg-cta-gradient text-white">
-                <PawPrint className="h-4 w-4" />
-              </span>
+              <img src="/logo.png" alt="PetPalHub" className="h-8 w-8 rounded-xl" />
               PetPalHub
             </a>
             <p className="mt-4 text-sm text-ink-900/60 dark:text-white/60 max-w-xs">
